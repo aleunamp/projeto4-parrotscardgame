@@ -1,98 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
 body {
-    width:100%;
-    background-color:  #EEF9BF;
+  width: 100%;
+  background-color: #eef9bf;
 }
 
-.title{
-    margin: 40px  auto 0px auto;
+.title {
+  margin: 40px auto 0px auto;
+  box-sizing: border-box;
+
+  width: 540px;
+  height: 63px;
+}
+
+.title h1 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: -0.004em;
+
+  color: #75b79e;
+}
+
+.distribuicao-de-cartas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 47px;
+  margin-left: 122px;
+  margin-right: 116px;
+  box-sizing: border-box;
+}
+
+.carta {
+  width: 117px;
+  height: 146px;
+
+  margin-right: 34px;
+  margin-left: 34px;
+  margin-bottom: 34px;
+
+  padding-top: 24px;
+  padding-bottom: 22px;
+  padding-right: 7px;
+  padding-left: 10px;
+  box-sizing: border-box;
+
+  background-color: #a7e9af;
+  border: 1px solid #99cea8;
+  border-radius: 5px;
+
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+}
+
+.virada {
+  transform: rotateY(180deg);
+}
+
+img {
+  width: 100%;
+  height: 100px;
+}
+
+.escondido {
+  display: none;
+}
+
+@media (max-width: 614px) {
+  .title {
+    margin: 40px auto 0px auto;
     box-sizing: border-box;
 
-    width: 540px;
+    width: 312px;
     height: 63px;
-}
+  }
 
-.title h1{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 66px;
-    letter-spacing: -0.004em;
+  .title h1 {
+    font-size: 36px;
+    text-align: center;
+    line-height: 42px;
+  }
 
-    color: #75B79E;
-}
-
-.distribuicao-de-cartas{
+  .distribuicao-de-cartas {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     margin-top: 47px;
-    margin-left: 122px;
-    margin-right: 116px;
     box-sizing: border-box;
-}
-
-.carta {
-    width: 117px;
-    height: 146px;
-
-    margin-right: 34px;
-    margin-left: 34px;
-    margin-bottom: 34px;
-
-    padding-top:24px;
-    padding-bottom:22px;
-    padding-right:7px;
-    padding-left:10px;
-    box-sizing: border-box;
-
-    background-color: #A7E9AF;
-    border: 1px solid #99CEA8;
-    border-radius: 5px;
-
-    transition: all 400ms ease;
-    transform-style: preserve-3d;
-}
-
-.virada {
-    transform: rotateY(180deg);
-}
-
-img{
-    width:100%;
-    height: 100px;
-}
-
-.escondido {
-    display: none;
-}
-
-@media (max-width:614px){
-    .title{
-        margin: 40px  auto 0px auto;
-        box-sizing: border-box;
-    
-        width: 312px;
-        height: 63px;
-    }
-
-    .title h1{
-        font-size: 36px;
-        text-align: center;
-        line-height: 42px;
-    }
-
-    .distribuicao-de-cartas{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        margin-top: 47px;
-        box-sizing: border-box;
-    }
+  }
 }
