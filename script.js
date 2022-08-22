@@ -93,5 +93,21 @@ function cliqueNaCarta(carta) {
   }
 }
 
+function compararCartas() {
+    let primeiraCarta = cartasSelecionadas[0];
+    let segundaCarta = cartasSelecionadas[1];
+  
+    if (
+      primeiraCarta.querySelector(".carta-tras").innerHTML ===
+        segundaCarta.querySelector(".carta-tras").innerHTML &&
+      primeiraCarta !== segundaCarta
+    ) {
+      cartasCorretas.push(primeiraCarta);
+      cartasCorretas.push(segundaCarta);
+      cartasSelecionadas = [];
+    } else {
+      setTimeout(desvirarCartas, 1000);
+    }
+  }
 
 
