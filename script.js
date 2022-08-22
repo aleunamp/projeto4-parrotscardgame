@@ -123,4 +123,8 @@ function compararCartas() {
     cartasSelecionadas = [];
   }
 
+  function jogoFinalizado() {
+    alert(`Você ganhou em ${jogadas} jogadas!`);
+  }
+
 
