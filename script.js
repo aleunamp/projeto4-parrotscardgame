@@ -58,4 +58,40 @@ function BaralhoNaTela() {
 
 BaralhoNaTela();
 
+let cartasSelecionadas = [];
+let cartasCorretas = [];
+let jogadas = 0;
+
+function cliqueNaCarta(carta) {
+  carta.classList.toggle("virada");
+
+  let cartaFrenteSelecionada = carta.querySelector(".carta-frente");
+  let cartaTrasSelecionada = carta.querySelector(".carta-tras");
+
+  if (cartaFrenteSelecionada.classList.contains("escondido")) {
+    cartaTrasSelecionada.classList.add("escondido");
+    cartaFrenteSelecionada.classList.remove("escondido");
+  } else {
+    cartaFrenteSelecionada.classList.add("escondido");
+    cartaTrasSelecionada.classList.remove("escondido");
+    jogadas++;
+  }
+
+  cartasSelecionadas.push(carta);
+
+  if (cartasSelecionadas.length === 2) {
+    compararCartas();
+  }
+
+  if (cartasSelecionadas.length >= 3) {
+    cartaFrenteSelecionada.classList.remove("escondido");
+    cartaTrasSelecionada.classList.add("escondido");
+  }
+
+  if (cartasCorretas.length === numCartas) {
+    setTimeout(jogoFinalizado, 1000);
+  }
+}
+
+
 
