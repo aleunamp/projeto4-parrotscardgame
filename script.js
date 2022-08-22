@@ -110,4 +110,17 @@ function compararCartas() {
     }
   }
 
+  function desvirarCartas() {
+    let primeiraCarta = cartasSelecionadas[0];
+    let segundaCarta = cartasSelecionadas[1];
+  
+    primeiraCarta.querySelector(".carta-tras").classList.add("escondido");
+    primeiraCarta.querySelector(".carta-frente").classList.remove("escondido");
+  
+    segundaCarta.querySelector(".carta-tras").classList.add("escondido");
+    segundaCarta.querySelector(".carta-frente").classList.remove("escondido");
+  
+    cartasSelecionadas = [];
+  }
+
 
