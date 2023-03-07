@@ -12,8 +12,9 @@ let icons = [
 
 function QntdDeCartas() {
   while (numCartas < 4 || numCartas > 14 || numCartas % 2 !== 0) {
+    alert("O número de cartas deve ser par, maior que 4 e menor que 14!");
     numCartas = Number(prompt("Deseja jogar com quantas cartas?"));
-  }
+  } 
 }
 
 QntdDeCartas();
