@@ -42,8 +42,6 @@ function IniciarJogo() {
   jogo.sort(comparador);
 }
 
-console.log(jogo);
-
 function comparador() {
   return Math.random() - 0.5;
 }
@@ -62,6 +60,8 @@ BaralhoNaTela();
 let cartasSelecionadas = [];
 let cartasCorretas = [];
 let jogadas = 0;
+let primeiraCarta;
+let segundaCarta;
 
 function cliqueNaCarta(carta) {
   carta.classList.toggle("virada");
@@ -69,7 +69,7 @@ function cliqueNaCarta(carta) {
   let cartaFrenteSelecionada = carta.querySelector(".carta-frente");
   let cartaTrasSelecionada = carta.querySelector(".carta-tras");
 
-  if (cartaFrenteSelecionada.classList.contains("escondido")) {
+  if (cartaFrenteSelecionada.classList.contains("escondido") && !cartasCorretas.contains(carta)) {
     cartaTrasSelecionada.classList.add("escondido");
     cartaFrenteSelecionada.classList.remove("escondido");
   } else {
@@ -95,12 +95,12 @@ function cliqueNaCarta(carta) {
 }
 
 function compararCartas() {
-    let primeiraCarta = cartasSelecionadas[0];
-    let segundaCarta = cartasSelecionadas[1];
+    primeiraCarta = cartasSelecionadas[0];
+    segundaCarta = cartasSelecionadas[1];
   
     if (
       primeiraCarta.querySelector(".carta-tras").innerHTML ===
-        segundaCarta.querySelector(".carta-tras").innerHTML &&
+      segundaCarta.querySelector(".carta-tras").innerHTML &&
       primeiraCarta !== segundaCarta
     ) {
       cartasCorretas.push(primeiraCarta);
